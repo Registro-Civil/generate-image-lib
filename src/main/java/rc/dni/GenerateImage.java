@@ -103,7 +103,7 @@ public class GenerateImage {
                 InputStream inputStream = new ByteArrayInputStream(decodedBytes);
 		        BufferedImage foto = ImageIO.read(inputStream);
 		        if(foto.getWidth() > ANCHO) {
-		        	BufferedImage resizedImage = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_BYTE_GRAY);
+		        	BufferedImage resizedImage = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_3BYTE_BGR);
 		        	Graphics2D gFotoAux = resizedImage.createGraphics();
 		        	gFotoAux.drawImage(foto, 0, 0, ANCHO, ALTO, null);
 		        	gFotoAux.dispose();
